@@ -14,6 +14,7 @@ async function startVideo() {
     stream => video.srcObject = stream,
     err => console.error(err)
   )
+   await getData();
    recognizeFaces();
 }
 
@@ -58,4 +59,14 @@ async function loadLabeledImages() {
       return new faceapi.LabeledFaceDescriptors(label, descriptions);
     })
   );
+}
+
+async function getData() {
+  firebase.database()
+  .ref('images')
+  .once('value', async data => {
+    data.forEach( item => {
+      console.log(item.val());
+    });
+  });
 }
