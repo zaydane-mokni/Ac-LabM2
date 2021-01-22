@@ -22,29 +22,6 @@
 </head>
 <body>
     <video id="videoInput" width="720" height="550" muted controls>
-    <!-- The core Firebase JS SDK is always required and must be listed first -->
-    <script src="https://www.gstatic.com/firebasejs/7.23.0/firebase-app.js"></script>
-    <script src="https://www.gstatic.com/firebasejs/7.23.0/firebase-analytics.js"></script>
-    <script src="https://www.gstatic.com/firebasejs/7.23.0/firebase-auth.js"></script>
-    <script src="https://www.gstatic.com/firebasejs/7.23.0/firebase-database.js"></script>
-
-    <script>
-    var firebaseConfig = {
-        apiKey: "AIzaSyCaKRC56RokDVU6CneuO8GnNPSi3O-0EYg",
-        authDomain: "facedetection-a5e9f.firebaseapp.com",
-        databaseURL: "https://facedetection-a5e9f.firebaseio.com",
-        projectId: "facedetection-a5e9f",
-        storageBucket: "facedetection-a5e9f.appspot.com",
-        messagingSenderId: "99268798442",
-        appId: "1:99268798442:web:b04246d2589fbd4591b493",
-        measurementId: "G-G14BFRB8TV"
-    };
-    
-    // Initialize Firebase
-    firebase.initializeApp(firebaseConfig);
-    firebase.analytics();
-    </script>
-
     <script defer async src="js/face-api.min.js"></script>
     <script type="module"  src="js/faceDetection.js"></script>
 </body>

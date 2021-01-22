@@ -14,8 +14,7 @@ async function startVideo() {
     stream => video.srcObject = stream,
     err => console.error(err)
   )
-   await getData();
-   recognizeFaces();
+   await recognizeFaces();
 }
 
 async function recognizeFaces() {
@@ -47,7 +46,7 @@ async function recognizeFaces() {
 }
 
 async function loadLabeledImages() {
-  const labels = ['zaydane', 'test'];
+  const labels = ['zaydane', 'mark'];
   return Promise.all(
     labels.map(async label => {
       const descriptions = [];
@@ -61,12 +60,3 @@ async function loadLabeledImages() {
   );
 }
 
-async function getData() {
-  firebase.database()
-  .ref('images')
-  .once('value', async data => {
-    data.forEach( item => {
-      console.log(item.val());
-    });
-  });
-}
