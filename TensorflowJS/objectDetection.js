@@ -1,4 +1,3 @@
-//https://nanonets.com/blog/object-detection-tensorflow-js/
 class App extends React.Component {
     videoRef = React.createRef();
     canvasRef = React.createRef();
